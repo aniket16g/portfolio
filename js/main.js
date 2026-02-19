@@ -162,4 +162,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // Contact Form Handler
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const nameInput = contactForm.querySelector('input[type="text"]');
+            const emailInput = contactForm.querySelector('input[type="email"]');
+            const messageInput = contactForm.querySelector('textarea');
+
+            const name = nameInput ? nameInput.value : '';
+            const email = emailInput ? emailInput.value : '';
+            const message = messageInput ? messageInput.value : '';
+
+            // Construct mailto link
+            const subject = `Portfolio Inquiry from ${name}`;
+            const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+            const mailtoLink = `mailto:capturedmemories1608@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailtoLink;
+
+            // Optional: generic feedback
+            alert("Taking you to your email client to send the message!");
+            contactForm.reset();
+        });
+    }
 });
