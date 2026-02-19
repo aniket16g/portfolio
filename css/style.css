@@ -745,3 +745,10 @@ footer {
     width: 100%;
     height: 100%;
 }
+
+.video-container.portrait {
+    padding-bottom: 177.77%;
+    /* 9:16 */
+    max-width: 400px;
+    margin: 0 auto;
+}
