@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket Ganguly | Visual Storyteller</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="loading">
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <span class="loader-text">INITIALIZING SCENE</span>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Film Grain Overlay -->
+    <div class="film-grain"></div>
+
+    <!-- Navigation -->
+    <header id="main-header">
+        <div class="logo">ANIKET GANGULY</div>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">Profile</a></li>
+                <li><a href="#projects" class="nav-link">Work</a></li>
+                <li><a href="#showreel" class="nav-link">Showreel</a></li>
+                <li><a href="#contact" class="nav-link">Connect</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle">Menu</button>
+    </header>
+
+    <!-- Main Content -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Hero Section -->
+            <section id="hero" class="hero-section">
+                <div class="video-background">
+                    <!-- Placeholder for video; using a dark placeholder for now -->
+                    <div class="video-overlay"></div>
+                    <video autoplay muted loop playsinline poster="assets/hero-poster.jpg" id="hero-video">
+                        <source src="" type="video/mp4"> <!-- To be filled with user asset -->
+                    </video>
+                </div>
+                <div class="hero-content">
+                    <h1 class="fade-in-up">Aniket Ganguly</h1>
+                    <p class="subtitle fade-in-up delay-1">Visual Storyteller | Filmmaker | Photographer | Artist</p>
+                    <a href="#projects" class="cta-button fade-in-up delay-2">View My Work</a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section" data-bgcolor="#0a0a0a">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-image-wrapper parallax-image">
+                            <!-- User Image -->
+                            <img src="assets/me.jpg" alt="Aniket Ganguly" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="about-text">
+                            <h2 class="section-title">The Art of Framing Time</h2>
+                            <p>I am a multidisciplinary artist focused on capturing the raw emotion of a moment. Whether
+                                through the lens of a camera or the timeline of an edit, my goal is to tell stories that
+                                resonate on a visceral level.</p>
+                            <p>With a background in fine arts and cinema, I blend traditional aesthetics with modern
+                                techniques to create visuals that feel timeless yet urgent.</p>
+                            <div class="signature">Aniket Ganguly</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section" data-bgcolor="#050505">
+                <div class="container">
+                    <header class="section-header">
+                        <h2 class="section-title">Selected Works</h2>
+                        <div class="project-filters">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="film">Film</button>
+                            <button class="filter-btn" data-filter="photo">Photography</button>
+                            <button class="filter-btn" data-filter="design">Design</button>
+                        </div>
+                    </header>
+
+                    <div class="projects-grid">
+                        <!-- Project Item 1 -->
+                        <a href="https://youtu.be/nEdMDkBIoZ0" target="_blank" class="project-item"
+                            data-category="film">
+                            <div class="project-thumbnail">
+                                <img src="https://img.youtube.com/vi/nEdMDkBIoZ0/maxresdefault.jpg"
+                                    alt="Paaye Hata Ishwar" class="placeholder-img" style="object-fit: cover;">
+                            </div>
+                            <div class="project-info">
+                                <h3>Paaye Hata Ishwar</h3>
+                                <p>Documentary | Bohurupi Tradition</p>
+                            </div>
+                        </a>
+                        <!-- Project Item 2 -->
+                        <a href="https://youtu.be/99-5_rvTfcI" target="_blank" class="project-item"
+                            data-category="film">
+                            <div class="project-thumbnail">
+                                <img src="https://img.youtube.com/vi/99-5_rvTfcI/maxresdefault.jpg" alt="CTRL + C"
+                                    class="placeholder-img" style="object-fit: cover;">
+                            </div>
+                            <div class="project-info">
+                                <h3>CTRL + C</h3>
+                                <p>Short Film</p>
+                            </div>
+                        </a>
+                        <!-- Project Item 3 -->
+                        <a href="https://youtu.be/w5RqVWvOCNk" target="_blank" class="project-item"
+                            data-category="film">
+                            <div class="project-thumbnail">
+                                <img src="https://img.youtube.com/vi/w5RqVWvOCNk/maxresdefault.jpg" alt="Short Film"
+                                    class="placeholder-img" style="object-fit: cover;">
+                            </div>
+                            <div class="project-info">
+                                <h3>Short Film</h3>
+                                <p>Cinematic Storytelling</p>
+                            </div>
+                        </a>
+                        <!-- Project Item 4 -->
+                        <a href="https://youtu.be/YkpS2aC9PKw" target="_blank" class="project-item"
+                            data-category="film">
+                            <div class="project-thumbnail">
+                                <img src="https://img.youtube.com/vi/YkpS2aC9PKw/maxresdefault.jpg"
+                                    alt="Pre Wedding Film" class="placeholder-img" style="object-fit: cover;">
+                            </div>
+                            <div class="project-info">
+                                <h3>Pre Wedding Film</h3>
+                                <p>Cinematic Wedding</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section (Masonry) -->
+            <section id="gallery" class="gallery-section">
+                <div class="container">
+                    <h2 class="section-title">Visual Diary</h2>
+                    <div class="masonry-grid">
+                        <div class="masonry-item">
+                            <img src="assets/visual arts/113.jpg" class="placeholder-img" style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item tall">
+                            <img src="assets/visual arts/KAZA 766.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="assets/visual arts/20241017_175950.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item wide">
+                            <img src="assets/visual arts/_MG_0493 (1).png" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="assets/visual arts/KAZA 1261.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item tall">
+                            <img src="assets/visual arts/20220621155849_IMG_1050.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="assets/visual arts/20230401092523_IMG_7458.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="assets/visual arts/IMG_1505.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item wide">
+                            <img src="assets/visual arts/IMG_1836.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item tall">
+                            <img src="assets/visual arts/RUPSA 037.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="assets/visual arts/_MG_1928.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="masonry-item">
+                            <img src="assets/visual arts/shrestha 034.jpg" class="placeholder-img"
+                                style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Showreel Section -->
+            <section id="showreel" class="showreel-section">
+                <div class="container">
+                    <h2 class="section-title center">2025 Showreel</h2>
+                    <div class="video-wrapper">
+                        <video controls poster="assets/andar 2.png"
+                            style="width: 100%; height: 100%; object-fit: cover; background: #000;">
+                            <source src="assets/ANDAR KYA HAI.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="services-section">
+                <div class="container">
+                    <h2 class="section-title">Collaborate</h2>
+                    <ul class="services-list">
+                        <li><span>01</span>
+                            <h3>Cinematography</h3>
+                        </li>
+                        <li><span>02</span>
+                            <h3>Creative Direction</h3>
+                        </li>
+                        <li><span>03</span>
+                            <h3>Photography</h3>
+                        </li>
+                        <li><span>04</span>
+                            <h3>Post-Production</h3>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                <div class="container">
+                    <div class="contact-content">
+                        <h2 class="big-title">Let's Create<br>Something Meaningful</h2>
+                        <a href="mailto:capturedmemories1608@gmail.com"
+                            class="email-link">capturedmemories1608@gmail.com</a>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/cmw.me?igsh=dDh3eWJpZGtwaG9u"
+                                target="_blank">Instagram</a>
+                            <a href="https://www.youtube.com/@cmw-me" target="_blank">YouTube</a>
+                            <a href="https://www.linkedin.com/in/aniket-ganguly-465142299/" target="_blank">LinkedIn</a>
+                        </div>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea placeholder="Tell me about your project" rows="4"></textarea>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 User Portfolio. All rights reserved.</p>
+        </footer>
+
+        </div> <!-- End Smooth Content -->
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
