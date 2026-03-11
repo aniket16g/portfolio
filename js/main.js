@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.querySelector('.cursor');
     const follower = document.querySelector('.cursor-follower');
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 768 && !('ontouchstart' in window)) {
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = `${e.clientX}px`;
             cursor.style.top = `${e.clientY}px`;
@@ -30,6 +30,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 follower.style.left = `${e.clientX}px`;
                 follower.style.top = `${e.clientY}px`;
             }, 50);
+        });
+    }
+
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-active');
+            menuToggle.textContent = navMenu.classList.contains('nav-active') ? 'Close' : 'Menu';
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav-active');
+                menuToggle.textContent = 'Menu';
+            });
         });
     }
 
